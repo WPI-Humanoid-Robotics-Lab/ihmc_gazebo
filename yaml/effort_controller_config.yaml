@@ -1,0 +1,160 @@
+atlas:
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 500
+
+  back_bkx_effort_controller:
+    initial_angle: 0.0
+    type: effort_controllers/joint_effort_controller
+    joint: back_bkx
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  back_bky_effort_controller:
+    initial_angle: 0.0
+    type: effort_controllers/joint_effort_controller
+    joint: back_bky
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  back_bkz_effort_controller:
+    initial_angle: 0.0
+    type: effort_controllers/joint_effort_controller
+    joint: back_bkz
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  hokuyo_joint_effort_controller:
+    initial_angle: 0.0
+    type: effort_controllers/joint_effort_controller
+    joint: hokuyo_joint
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  l_arm_elx_effort_controller:
+    initial_angle: 0.498
+    type: effort_controllers/joint_effort_controller
+    joint: l_arm_elx
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  l_arm_ely_effort_controller:
+    initial_angle: 2.0
+    type: effort_controllers/joint_effort_controller
+    joint: l_arm_ely
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  l_arm_shx_effort_controller:
+    initial_angle: 0.0
+    type: effort_controllers/joint_effort_controller
+    joint: l_arm_shx
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  l_arm_shz_effort_controller:
+    initial_angle: 0.0
+    type: effort_controllers/joint_effort_controller
+    joint: l_arm_shz
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  l_arm_wrx_effort_controller:
+    initial_angle: -0.004
+    type: effort_controllers/joint_effort_controller
+    joint: l_arm_wrx
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  l_arm_wry_effort_controller:
+    initial_angle: 0.0
+    type: effort_controllers/joint_effort_controller
+    joint: l_arm_wry
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  l_arm_wry2_effort_controller:
+    initial_angle: 0.0
+    type: effort_controllers/joint_effort_controller
+    joint: l_arm_wry2
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  l_leg_akx_effort_controller:
+    initial_angle: 0.0
+    type: effort_controllers/joint_effort_controller
+    joint: l_leg_akx
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  l_leg_aky_effort_controller:
+    initial_angle: -0.35
+    type: effort_controllers/joint_effort_controller
+    joint: l_leg_aky
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  l_leg_hpx_effort_controller:
+    initial_angle: 0.0
+    type: effort_controllers/joint_effort_controller
+    joint: l_leg_hpx
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  l_leg_hpy_effort_controller:
+    initial_angle: -0.35
+    type: effort_controllers/joint_effort_controller
+    joint: l_leg_hpy
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  l_leg_hpz_effort_controller:
+    initial_angle: 0.0
+    type: effort_controllers/joint_effort_controller
+    joint: l_leg_hpz
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  l_leg_kny_effort_controller:
+    initial_angle: 0.7
+    type: effort_controllers/joint_effort_controller
+    joint: l_leg_kny
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  neck_ry_effort_controller:
+    initial_angle: 0.0
+    type: effort_controllers/joint_effort_controller
+    joint: neck_ry
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  r_arm_elx_effort_controller:
+    initial_angle: -0.498
+    type: effort_controllers/joint_effort_controller
+    joint: r_arm_elx
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  r_arm_ely_effort_controller:
+    initial_angle: 2.0
+    type: effort_controllers/joint_effort_controller
+    joint: r_arm_ely
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  r_arm_shx_effort_controller:
+    initial_angle: 0.0
+    type: effort_controllers/joint_effort_controller
+    joint: r_arm_shx
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  r_arm_shz_effort_controller:
+    initial_angle: 0.0
+    type: effort_controllers/joint_effort_controller
+    joint: r_arm_shz
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  r_arm_wrx_effort_controller:
+    initial_angle: 0.004
+    type: effort_controllers/joint_effort_controller
+    joint: r_arm_wrx
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  r_arm_wry_effort_controller:
+    initial_angle: 0.0
+    type: effort_controllers/joint_effort_controller
+    joint: r_arm_wry
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  r_arm_wry2_effort_controller:
+    initial_angle: 0.0
+    type: effort_controllers/joint_effort_controller
+    joint: r_arm_wry2
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  r_leg_akx_effort_controller:
+    initial_angle: 0.0
+    type: effort_controllers/joint_effort_controller
+    joint: r_leg_akx
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  r_leg_aky_effort_controller:
+    initial_angle: -0.35
+    type: effort_controllers/joint_effort_controller
+    joint: r_leg_aky
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  r_leg_hpx_effort_controller:
+    initial_angle: 0.0
+    type: effort_controllers/joint_effort_controller
+    joint: r_leg_hpx
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  r_leg_hpy_effort_controller:
+    initial_angle: -0.35
+    type: effort_controllers/joint_effort_controller
+    joint: r_leg_hpy
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  r_leg_hpz_effort_controller:
+    initial_angle: 0.0
+    type: effort_controllers/joint_effort_controller
+    joint: r_leg_hpz
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  r_leg_kny_effort_controller:
+    initial_angle: 0.7
+    type: effort_controllers/joint_effort_controller
+    joint: r_leg_kny
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
