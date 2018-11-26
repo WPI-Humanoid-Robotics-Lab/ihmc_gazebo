@@ -160,7 +160,7 @@ public:
         for (unsigned int i = 0; i < sensors.size(); i++) {
             gazebo::sensors::ImuSensorPtr imu = std::dynamic_pointer_cast<gazebo::sensors::ImuSensor>(sensors.at(i));
             if (imu) {
-                if (imu->GetParentName() == "atlas::pelvis") {
+                if (imu->ParentName() == "atlas::pelvis") {
                     imus.push_back(imu);
                 }
             }
