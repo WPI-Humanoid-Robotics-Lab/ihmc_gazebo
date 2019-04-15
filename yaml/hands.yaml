@@ -1,0 +1,566 @@
+# left_hand_controller:
+  #   type: "position_controllers/JointGroupPositionController"
+  #   joints: 
+  #     - l_finger_1_1_to_finger_1_2
+  #     - l_finger_2_1_to_finger_2_2
+  #     - l_finger_3_1_to_finger_3_2
+  #     - l_palm_to_finger_1_1
+  #     - l_palm_to_finger_2_1
+  #     - l_palm_to_finger_3_1
+  #     - l_finger_1_2_to_finger_1_3
+  #     - l_finger_2_2_to_finger_2_3
+  #     - l_finger_3_2_to_finger_3_3
+    
+  # right_hand_controller:
+  #   type: "position_controllers/JointGroupPositionController"
+  #   joints: 
+  #     - r_finger_1_1_to_finger_1_2
+  #     - r_finger_2_1_to_finger_2_2
+  #     - r_finger_3_1_to_finger_3_2
+  #     - r_palm_to_finger_1_1
+  #     - r_palm_to_finger_2_1
+  #     - r_palm_to_finger_3_1
+  #     - r_finger_1_2_to_finger_1_3
+  #     - r_finger_2_2_to_finger_2_3
+  #     - r_finger_3_2_to_finger_3_3
+  l_finger_1_joint_1_effort_controller:
+    initial_angle : 0.0
+    type: position_controllers/joint_position_controller
+    joint: l_finger_1_joint_1
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  l_finger_1_joint_2_effort_controller:
+    initial_angle : 0.0
+    type: position_controllers/joint_position_controller
+    joint: l_finger_1_joint_2
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  l_finger_1_joint_3_effort_controller:
+    initial_angle : 0.0
+    type: position_controllers/joint_position_controller
+    joint: l_finger_1_joint_3
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # l_finger_1_joint_median_actuating_hinge_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: l_finger_1_joint_median_actuating_hinge
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # l_finger_1_joint_median_actuating_hinge_median_bar_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: l_finger_1_joint_median_actuating_hinge_median_bar
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # l_finger_1_joint_paradistal_hinge_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: l_finger_1_joint_paradistal_hinge
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # l_finger_1_joint_paramedian_hinge_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: l_finger_1_joint_paramedian_hinge
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # l_finger_1_joint_paramedian_hinge_median_bar_underactuated_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: l_finger_1_joint_paramedian_hinge_median_bar_underactuated
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # l_finger_1_joint_paraproximal_actuating_hinge_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: l_finger_1_joint_paraproximal_actuating_hinge
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # l_finger_1_joint_paraproximal_bar_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: l_finger_1_joint_paraproximal_bar
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # l_finger_1_joint_proximal_actuating_bar_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: l_finger_1_joint_proximal_actuating_bar
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # l_finger_1_joint_proximal_actuating_hinge_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: l_finger_1_joint_proximal_actuating_hinge
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # l_finger_1_link_median_bar_link_3_couple_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: l_finger_1_link_median_bar_link_3_couple
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # l_finger_1_link_paradistal_hinge_link_3_couple_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: l_finger_1_link_paradistal_hinge_link_3_couple
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # l_finger_1_link_paramedian_bar_paradistal_hinge_couple_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: l_finger_1_link_paramedian_bar_paradistal_hinge_couple
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # l_finger_1_link_paraproximal_bar_paramedian_hinge_couple_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: l_finger_1_link_paraproximal_bar_paramedian_hinge_couple
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # l_finger_1_link_proximal_actuating_bar_median_actuating_hinge_couple_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: l_finger_1_link_proximal_actuating_bar_median_actuating_hinge_couple
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  l_finger_2_joint_1_effort_controller:
+    initial_angle : 0.0
+    type: position_controllers/joint_position_controller
+    joint: l_finger_2_joint_1
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  l_finger_2_joint_2_effort_controller:
+    initial_angle : 0.0
+    type: position_controllers/joint_position_controller
+    joint: l_finger_2_joint_2
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  l_finger_2_joint_3_effort_controller:
+    initial_angle : 0.0
+    type: position_controllers/joint_position_controller
+    joint: l_finger_2_joint_3
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # l_finger_2_joint_median_actuating_hinge_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: l_finger_2_joint_median_actuating_hinge
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # l_finger_2_joint_median_actuating_hinge_median_bar_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: l_finger_2_joint_median_actuating_hinge_median_bar
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # l_finger_2_joint_paradistal_hinge_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: l_finger_2_joint_paradistal_hinge
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # l_finger_2_joint_paramedian_hinge_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: l_finger_2_joint_paramedian_hinge
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # l_finger_2_joint_paramedian_hinge_median_bar_underactuated_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: l_finger_2_joint_paramedian_hinge_median_bar_underactuated
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # l_finger_2_joint_paraproximal_actuating_hinge_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: l_finger_2_joint_paraproximal_actuating_hinge
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # l_finger_2_joint_paraproximal_bar_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: l_finger_2_joint_paraproximal_bar
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # l_finger_2_joint_proximal_actuating_bar_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: l_finger_2_joint_proximal_actuating_bar
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # l_finger_2_joint_proximal_actuating_hinge_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: l_finger_2_joint_proximal_actuating_hinge
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # l_finger_2_link_median_bar_link_3_couple_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: l_finger_2_link_median_bar_link_3_couple
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # l_finger_2_link_paradistal_hinge_link_3_couple_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: l_finger_2_link_paradistal_hinge_link_3_couple
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # l_finger_2_link_paramedian_bar_paradistal_hinge_couple_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: l_finger_2_link_paramedian_bar_paradistal_hinge_couple
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # l_finger_2_link_paraproximal_bar_paramedian_hinge_couple_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: l_finger_2_link_paraproximal_bar_paramedian_hinge_couple
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # l_finger_2_link_proximal_actuating_bar_median_actuating_hinge_couple_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: l_finger_2_link_proximal_actuating_bar_median_actuating_hinge_couple
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  l_finger_middle_joint_1_effort_controller:
+    initial_angle : 0.0
+    type: position_controllers/joint_position_controller
+    joint: l_finger_middle_joint_1
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  l_finger_middle_joint_2_effort_controller:
+    initial_angle : 0.0
+    type: position_controllers/joint_position_controller
+    joint: l_finger_middle_joint_2
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  l_finger_middle_joint_3_effort_controller:
+    initial_angle : 0.0
+    type: position_controllers/joint_position_controller
+    joint: l_finger_middle_joint_3
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # l_finger_middle_joint_median_actuating_hinge_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: l_finger_middle_joint_median_actuating_hinge
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # l_finger_middle_joint_median_actuating_hinge_median_bar_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: l_finger_middle_joint_median_actuating_hinge_median_bar
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # l_finger_middle_joint_paradistal_hinge_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: l_finger_middle_joint_paradistal_hinge
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # l_finger_middle_joint_paramedian_hinge_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: l_finger_middle_joint_paramedian_hinge
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # l_finger_middle_joint_paramedian_hinge_median_bar_underactuated_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: l_finger_middle_joint_paramedian_hinge_median_bar_underactuated
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # l_finger_middle_joint_paraproximal_actuating_hinge_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: l_finger_middle_joint_paraproximal_actuating_hinge
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # l_finger_middle_joint_paraproximal_bar_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: l_finger_middle_joint_paraproximal_bar
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # l_finger_middle_joint_proximal_actuating_bar_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: l_finger_middle_joint_proximal_actuating_bar
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # l_finger_middle_joint_proximal_actuating_hinge_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: l_finger_middle_joint_proximal_actuating_hinge
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # l_finger_middle_link_median_bar_link_3_couple_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: l_finger_middle_link_median_bar_link_3_couple
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # l_finger_middle_link_paradistal_hinge_link_3_couple_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: l_finger_middle_link_paradistal_hinge_link_3_couple
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # l_finger_middle_link_paramedian_bar_paradistal_hinge_couple_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: l_finger_middle_link_paramedian_bar_paradistal_hinge_couple
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # l_finger_middle_link_paraproximal_bar_paramedian_hinge_couple_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: l_finger_middle_link_paraproximal_bar_paramedian_hinge_couple
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # l_finger_middle_link_proximal_actuating_bar_median_actuating_hinge_couple_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: l_finger_middle_link_proximal_actuating_bar_median_actuating_hinge_couple
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  l_palm_finger_1_joint_effort_controller:
+    initial_angle : 0.0
+    type: position_controllers/joint_position_controller
+    joint: l_palm_finger_1_joint
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  l_palm_finger_2_joint_effort_controller:
+    initial_angle : 0.0
+    type: position_controllers/joint_position_controller
+    joint: l_palm_finger_2_joint
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  l_palm_finger_middle_joint_effort_controller:
+    initial_angle : 0.0
+    type: position_controllers/joint_position_controller
+    joint: l_palm_finger_middle_joint
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+
+  r_finger_1_joint_1_effort_controller:
+    initial_angle : 0.0
+    type: position_controllers/joint_position_controller
+    joint: r_finger_1_joint_1
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  r_finger_1_joint_2_effort_controller:
+    initial_angle : 0.0
+    type: position_controllers/joint_position_controller
+    joint: r_finger_1_joint_2
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  r_finger_1_joint_3_effort_controller:
+    initial_angle : 0.0
+    type: position_controllers/joint_position_controller
+    joint: r_finger_1_joint_3
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # r_finger_1_joint_median_actuating_hinge_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: r_finger_1_joint_median_actuating_hinge
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # r_finger_1_joint_median_actuating_hinge_median_bar_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: r_finger_1_joint_median_actuating_hinge_median_bar
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # r_finger_1_joint_paradistal_hinge_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: r_finger_1_joint_paradistal_hinge
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # r_finger_1_joint_paramedian_hinge_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: r_finger_1_joint_paramedian_hinge
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # r_finger_1_joint_paramedian_hinge_median_bar_underactuated_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: r_finger_1_joint_paramedian_hinge_median_bar_underactuated
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # r_finger_1_joint_paraproximal_actuating_hinge_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: r_finger_1_joint_paraproximal_actuating_hinge
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # r_finger_1_joint_paraproximal_bar_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: r_finger_1_joint_paraproximal_bar
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # r_finger_1_joint_proximal_actuating_bar_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: r_finger_1_joint_proximal_actuating_bar
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # r_finger_1_joint_proximal_actuating_hinge_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: r_finger_1_joint_proximal_actuating_hinge
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # r_finger_1_link_median_bar_link_3_couple_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: r_finger_1_link_median_bar_link_3_couple
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # r_finger_1_link_paradistal_hinge_link_3_couple_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: r_finger_1_link_paradistal_hinge_link_3_couple
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # r_finger_1_link_paramedian_bar_paradistal_hinge_couple_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: r_finger_1_link_paramedian_bar_paradistal_hinge_couple
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # r_finger_1_link_paraproximal_bar_paramedian_hinge_couple_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: r_finger_1_link_paraproximal_bar_paramedian_hinge_couple
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # r_finger_1_link_proximal_actuating_bar_median_actuating_hinge_couple_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: r_finger_1_link_proximal_actuating_bar_median_actuating_hinge_couple
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  r_finger_2_joint_1_effort_controller:
+    initial_angle : 0.0
+    type: position_controllers/joint_position_controller
+    joint: r_finger_2_joint_1
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  r_finger_2_joint_2_effort_controller:
+    initial_angle : 0.0
+    type: position_controllers/joint_position_controller
+    joint: r_finger_2_joint_2
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  r_finger_2_joint_3_effort_controller:
+    initial_angle : 0.0
+    type: position_controllers/joint_position_controller
+    joint: r_finger_2_joint_3
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # r_finger_2_joint_median_actuating_hinge_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: r_finger_2_joint_median_actuating_hinge
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # r_finger_2_joint_median_actuating_hinge_median_bar_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: r_finger_2_joint_median_actuating_hinge_median_bar
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # r_finger_2_joint_paradistal_hinge_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: r_finger_2_joint_paradistal_hinge
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # r_finger_2_joint_paramedian_hinge_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: r_finger_2_joint_paramedian_hinge
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # r_finger_2_joint_paramedian_hinge_median_bar_underactuated_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: r_finger_2_joint_paramedian_hinge_median_bar_underactuated
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # r_finger_2_joint_paraproximal_actuating_hinge_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: r_finger_2_joint_paraproximal_actuating_hinge
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # r_finger_2_joint_paraproximal_bar_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: r_finger_2_joint_paraproximal_bar
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # r_finger_2_joint_proximal_actuating_bar_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: r_finger_2_joint_proximal_actuating_bar
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # r_finger_2_joint_proximal_actuating_hinge_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: r_finger_2_joint_proximal_actuating_hinge
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # r_finger_2_link_median_bar_link_3_couple_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: r_finger_2_link_median_bar_link_3_couple
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # r_finger_2_link_paradistal_hinge_link_3_couple_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: r_finger_2_link_paradistal_hinge_link_3_couple
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # r_finger_2_link_paramedian_bar_paradistal_hinge_couple_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: r_finger_2_link_paramedian_bar_paradistal_hinge_couple
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # r_finger_2_link_paraproximal_bar_paramedian_hinge_couple_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: r_finger_2_link_paraproximal_bar_paramedian_hinge_couple
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # r_finger_2_link_proximal_actuating_bar_median_actuating_hinge_couple_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: r_finger_2_link_proximal_actuating_bar_median_actuating_hinge_couple
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  r_finger_middle_joint_1_effort_controller:
+    initial_angle : 0.0
+    type: position_controllers/joint_position_controller
+    joint: r_finger_middle_joint_1
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  r_finger_middle_joint_2_effort_controller:
+    initial_angle : 0.0
+    type: position_controllers/joint_position_controller
+    joint: r_finger_middle_joint_2
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  r_finger_middle_joint_3_effort_controller:
+    initial_angle : 0.0
+    type: position_controllers/joint_position_controller
+    joint: r_finger_middle_joint_3
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # r_finger_middle_joint_median_actuating_hinge_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: r_finger_middle_joint_median_actuating_hinge
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # r_finger_middle_joint_median_actuating_hinge_median_bar_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: r_finger_middle_joint_median_actuating_hinge_median_bar
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # r_finger_middle_joint_paradistal_hinge_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: r_finger_middle_joint_paradistal_hinge
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # r_finger_middle_joint_paramedian_hinge_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: r_finger_middle_joint_paramedian_hinge
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # r_finger_middle_joint_paramedian_hinge_median_bar_underactuated_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: r_finger_middle_joint_paramedian_hinge_median_bar_underactuated
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # r_finger_middle_joint_paraproximal_actuating_hinge_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: r_finger_middle_joint_paraproximal_actuating_hinge
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # r_finger_middle_joint_paraproximal_bar_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: r_finger_middle_joint_paraproximal_bar
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # r_finger_middle_joint_proximal_actuating_bar_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: r_finger_middle_joint_proximal_actuating_bar
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # r_finger_middle_joint_proximal_actuating_hinge_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: r_finger_middle_joint_proximal_actuating_hinge
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # r_finger_middle_link_median_bar_link_3_couple_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: r_finger_middle_link_median_bar_link_3_couple
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # r_finger_middle_link_paradistal_hinge_link_3_couple_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: r_finger_middle_link_paradistal_hinge_link_3_couple
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # r_finger_middle_link_paramedian_bar_paradistal_hinge_couple_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: r_finger_middle_link_paramedian_bar_paradistal_hinge_couple
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # r_finger_middle_link_paraproximal_bar_paramedian_hinge_couple_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: r_finger_middle_link_paraproximal_bar_paramedian_hinge_couple
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  # r_finger_middle_link_proximal_actuating_bar_median_actuating_hinge_couple_effort_controller:
+  #   initial_angle : 0.0
+  #   type: effort_controllers/joint_effort_controller
+  #   joint: r_finger_middle_link_proximal_actuating_bar_median_actuating_hinge_couple
+  #   pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  r_palm_finger_1_joint_effort_controller:
+    initial_angle : 0.0
+    type: position_controllers/joint_position_controller
+    joint: r_palm_finger_1_joint
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  r_palm_finger_2_joint_effort_controller:
+    initial_angle : 0.0
+    type: position_controllers/joint_position_controller
+    joint: r_palm_finger_2_joint
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}
+  r_palm_finger_middle_joint_effort_controller:
+    initial_angle : 0.0
+    type: position_controllers/joint_position_controller
+    joint: r_palm_finger_middle_joint
+    pid: {p: 4000.0, i: 5.0, d: 15.0, imax: 50.0, imin: -50.0, cmdMax: 300.0, cmdMin: -300.0}  
