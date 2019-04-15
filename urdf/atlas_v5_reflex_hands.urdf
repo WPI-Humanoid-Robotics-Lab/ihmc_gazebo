@@ -845,9 +845,12 @@
   </link>
   <link name="utorso">
     <inertial>
-      <mass value="84.409"/>
+      <!-- <mass value="84.409"/>
       <origin rpy="0 0 0" xyz="-0.0622 0.0023 0.3157"/>
-      <inertia ixx="1.577" ixy="-0.032" ixz="0.102" iyy="1.602" iyz="0.047" izz="0.565"/>
+      <inertia ixx="1.577" ixy="-0.032" ixz="0.102" iyy="1.602" iyz="0.047" izz="0.565"/> -->
+      <mass value="62.563" />
+      <origin rpy="0 0 0" xyz="-0.0622 0.0023 0.3157"/>
+      <inertia ixx="1.5" ixy="0" ixz="0.1" iyy="1.5" iyz="0.0" izz="0.5" />
     </inertial>
     <visual>
       <geometry>
@@ -1489,23 +1492,32 @@
   </link>
 
   <joint name="l_fixed" type="revolute">
-    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <origin rpy="0 1.57295 -1.57295" xyz="-0.00125 -0.15 0.0"/>
     <parent link="l_hand"/>
+    <child link="l_palm"/>
+    <limit effort="1000.0" lower="-0.1" upper="0.1" velocity="0.5"/>
+    <axis xyz="0 0 -1"/>
+  </joint>
+
+  <!-- Attaching a static frame from l_palm for grasping. -->
+  <link name="l_end_eff"/>
+  <joint name="l_robotiq_end_eff_virtual_joint" type="fixed">
+    <origin rpy="0 -1.57079633 0" xyz="0.0 0.0 0.15"/>
+    <parent link="l_palm"/>
+    <child link="l_end_eff"/>
+  </joint>
+
+  <joint name="l_fixed_dummy" type="revolute">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <parent link="l_palm"/>
     <child link="l_fixed_dummy"/>
     <limit effort="1000.0" lower="-0.1" upper="0.1" velocity="0.5"/>
     <axis xyz="0 0 -1"/>
   </joint>
-  <joint name="l_fixed_dummy" type="revolute">
+  <joint name="l_fixed_dummy2" type="revolute">
     <origin rpy="0 0 0" xyz="0 0 0"/>
     <parent link="l_fixed_dummy"/>
     <child link="l_fixed_dummy2"/>
-    <limit effort="1000.0" lower="-0.1" upper="0.1" velocity="0.5"/>
-    <axis xyz="0 0 -1"/>
-  </joint>
-  <joint name="l_fixed_dummy2" type="revolute">
-    <origin rpy="0 1.57295 -1.57295" xyz="-0.00125 -0.15 0.0"/>
-    <parent link="l_fixed_dummy2"/>
-    <child link="l_palm"/>
     <limit effort="1000.0" lower="-0.1" upper="0.1" velocity="0.5"/>
     <axis xyz="0 0 -1"/>
   </joint>
@@ -1921,25 +1933,33 @@
   </link>
 
   <joint name="r_fixed" type="revolute">
-    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <origin rpy="1.57295 1.57295 0" xyz="-0.00125 -0.15 0.0"/>
     <parent link="r_hand"/>
+    <child link="r_palm"/>
+    <limit effort="1000.0" lower="-0.1" upper="0.1" velocity="0.5"/>
+    <axis xyz="0 0 -1"/>
+  </joint>
+
+  <!-- Attaching a static frame from l_palm for grasping. -->
+  <link name="r_end_eff"/>
+  <joint name="r_robotiq_end_eff_virtual_joint" type="fixed">
+    <origin rpy="0 -1.57079633 0" xyz="0.0 0.0 0.15"/>
+    <parent link="r_palm"/>
+    <child link="r_end_eff"/>
+  </joint>
+
+  <joint name="r_fixed_dummy" type="revolute">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <parent link="r_palm"/>
     <child link="r_fixed_dummy"/>
     <limit effort="1000.0" lower="-0.1" upper="0.1" velocity="0.5"/>
     <axis xyz="0 0 -1"/>
   </joint>
 
-  <joint name="r_fixed_dummy" type="revolute">
+  <joint name="r_fixed_dummy2" type="revolute">
     <origin rpy="0 0 0" xyz="0 0 0"/>
     <parent link="r_fixed_dummy"/>
     <child link="r_fixed_dummy2"/>
-    <limit effort="1000.0" lower="-0.1" upper="0.1" velocity="0.5"/>
-    <axis xyz="0 0 -1"/>
-  </joint>
-
-  <joint name="r_fixed_dummy2" type="revolute">
-    <origin rpy="1.57295 1.57295 0" xyz="-0.00125 -0.15 0.0"/>
-    <parent link="r_fixed_dummy2"/>
-    <child link="r_palm"/>
     <limit effort="1000.0" lower="-0.1" upper="0.1" velocity="0.5"/>
     <axis xyz="0 0 -1"/>
   </joint>
