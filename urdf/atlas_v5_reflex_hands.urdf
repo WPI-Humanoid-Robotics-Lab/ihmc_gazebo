@@ -1310,6 +1310,11 @@
       <mass value="1e-5"/>
       <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6"/>
     </inertial>
+    <collision>
+      <geometry>
+        <mesh filename="package://reflex_hand_model/meshes/swivel_1.STL"/>
+      </geometry>
+    </collision>
   </link>
   <link name="l_finger_1_2">
     <visual>
@@ -1326,6 +1331,11 @@
       <mass value="1e-5"/>
       <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6"/>
     </inertial>
+    <collision>
+      <geometry>
+        <mesh filename="package://reflex_hand_model/meshes/proximal_1.STL"/>
+      </geometry>
+    </collision>
   </link>
   <link name="l_finger_1_3">
     <visual>
@@ -1342,6 +1352,11 @@
       <mass value="1e-5"/>
       <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6"/>
     </inertial>
+    <collision>
+      <geometry>
+        <mesh filename="package://reflex_hand_model/meshes/distal_1.STL"/>
+      </geometry>
+    </collision>
   </link>
   <!-- <a> This is strange: Links for Finger 2 but true! </a>-->
   <link name="l_finger_2_1">
@@ -1358,6 +1373,11 @@
       <mass value="1e-5"/>
       <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6"/>
     </inertial>
+    <collision>
+      <geometry>
+        <mesh filename="package://reflex_hand_model/meshes/swivel_1.STL"/>
+      </geometry>
+    </collision>
   </link>
   <link name="l_finger_2_2">
     <visual>
@@ -1375,6 +1395,11 @@
       <mass value="1e-5"/>
       <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6"/>
     </inertial>
+    <collision>
+      <geometry>
+        <mesh filename="package://reflex_hand_model/meshes/proximal_1.STL"/>
+      </geometry>
+    </collision>
   </link>
   <link name="l_finger_2_3">
     <visual>
@@ -1392,6 +1417,11 @@
       <mass value="1e-5"/>
       <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6"/>
     </inertial>
+    <collision>
+      <geometry>
+        <mesh filename="package://reflex_hand_model/meshes/distal_1.STL"/>
+      </geometry>
+    </collision>
   </link>
   <!-- <a> This is strange: Links for Finger 3 but true! </a>-->
   <link name="l_finger_3_1">
@@ -1409,6 +1439,11 @@
       <mass value="1e-5"/>
       <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6"/>
     </inertial>
+    <collision>
+      <geometry>
+        <mesh filename="package://reflex_hand_model/meshes/swivel_1.STL"/>
+      </geometry>
+    </collision>
   </link>
   <link name="l_finger_3_2">
     <visual>
@@ -1426,6 +1461,11 @@
       <mass value="1e-5"/>
       <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6"/>
     </inertial>
+    <collision>
+      <geometry>
+        <mesh filename="package://reflex_hand_model/meshes/proximal_1.STL"/>
+      </geometry>
+    </collision>
   </link>
   <link name="l_finger_3_3">
     <visual>
@@ -1443,6 +1483,11 @@
       <mass value="1e-5"/>
       <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6"/>
     </inertial>
+    <collision>
+      <geometry>
+        <mesh filename="package://reflex_hand_model/meshes/distal_1.STL"/>
+      </geometry>
+    </collision>
   </link>
   <link name="l_fixed_dummy">
     <visual>
@@ -1751,6 +1796,11 @@
       <mass value="1e-5"/>
       <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6"/>
     </inertial>
+    <collision>
+      <geometry>
+        <mesh filename="package://reflex_hand_model/meshes/swivel_1.STL"/>
+      </geometry>
+    </collision>
   </link>
   <link name="r_finger_1_2">
     <visual>
@@ -1767,6 +1817,11 @@
       <mass value="1e-5"/>
       <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6"/>
     </inertial>
+    <collision>
+      <geometry>
+        <mesh filename="package://reflex_hand_model/meshes/proximal_1.STL"/>
+      </geometry>
+    </collision>
   </link>
   <link name="r_finger_1_3">
     <visual>
@@ -1783,6 +1838,11 @@
       <mass value="1e-5"/>
       <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6"/>
     </inertial>
+    <collision>
+      <geometry>
+        <mesh filename="package://reflex_hand_model/meshes/distal_1.STL"/>
+      </geometry>
+    </collision>
   </link>
   <!-- <a> This is strange: Links for Finger 2 but true! </a>-->
   <link name="r_finger_2_1">
@@ -1799,6 +1859,11 @@
       <mass value="1e-5"/>
       <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6"/>
     </inertial>
+    <collision>
+      <geometry>
+        <mesh filename="package://reflex_hand_model/meshes/swivel_1.STL"/>
+      </geometry>
+    </collision>
   </link>
   <link name="r_finger_2_2">
     <visual>
@@ -1816,6 +1881,11 @@
       <mass value="1e-5"/>
       <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6"/>
     </inertial>
+    <collision>
+      <geometry>
+        <mesh filename="package://reflex_hand_model/meshes/proximal_1.STL"/>
+      </geometry>
+    </collision>
   </link>
   <link name="r_finger_2_3">
     <visual>
@@ -1833,6 +1903,11 @@
       <mass value="1e-5"/>
       <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6"/>
     </inertial>
+    <collision>
+      <geometry>
+        <mesh filename="package://reflex_hand_model/meshes/distal_1.STL"/>
+      </geometry>
+    </collision>
   </link>
   <!-- <a> This is strange: Links for Finger 3 but true! </a>-->
   <link name="r_finger_3_1">
@@ -1850,6 +1925,11 @@
       <mass value="1e-5"/>
       <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6"/>
     </inertial>
+    <collision>
+      <geometry>
+        <mesh filename="package://reflex_hand_model/meshes/swivel_1.STL"/>
+      </geometry>
+    </collision>
   </link>
   <link name="r_finger_3_2">
     <visual>
@@ -1867,6 +1947,11 @@
       <mass value="1e-5"/>
       <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6"/>
     </inertial>
+    <collision>
+      <geometry>
+        <mesh filename="package://reflex_hand_model/meshes/proximal_1.STL"/>
+      </geometry>
+    </collision>
   </link>
   <link name="r_finger_3_3">
     <visual>
@@ -1884,6 +1969,11 @@
       <mass value="1e-5"/>
       <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6"/>
     </inertial>
+    <collision>
+      <geometry>
+        <mesh filename="package://reflex_hand_model/meshes/distal_1.STL"/>
+      </geometry>
+    </collision>
   </link>
   <link name="r_fixed_dummy">
     <visual>
